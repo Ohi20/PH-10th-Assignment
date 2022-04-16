@@ -1,0 +1,12 @@
+.notfound-header{
+    color: white;
+    font-size: 40px;
+}
+.notFound{
+    background-color: #4B565F;
+    border: none;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
