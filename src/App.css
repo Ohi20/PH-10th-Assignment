@@ -1,38 +1,39 @@
 .App {
   text-align: center;
+  background-color: #99B3B2;
+  background-image:url('https://img.freepik.com/free-photo/figure-justice-holding-scales-sword_124595-823.jpg?w=900');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1.0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-div{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header-title{
   color: white;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 0;
+  padding-top: 10px;
+}
+.header-title2{
+  color: white;
+  font-size: 30px;
+  margin-top: 0;
+  margin-left: 40px;
+}
+.header-text{
+  background-color: #4B565F; 
+  border: none;
+  border-radius: 5px;
+  color:white;
+  margin-right: 40px;
+  padding: 0px 25px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
