@@ -1,0 +1,74 @@
+.banner-sec{
+    display:flex;
+}
+.banner-img-sec{
+    width: 50%;
+    background-color: #4B565F;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+.banner-text-sec{
+    color: white;
+    width: 50%;
+    background-color: #4B565F;
+    opacity: 0.8;
+    margin-right: 20px;
+    text-align: center;
+}
+.banner-img{
+    height: 400px;
+    width: 550px;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 8px solid;
+    opacity: 0.9;
+}
+.services-title{
+    font-size: 30px;
+    color: white;
+}
+.services-sec{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+}
+
+.card1{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+.card2{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+.card3{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+.footer{
+    background-color: #4B565F;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+.footer p {
+    color: white;
+
+}
