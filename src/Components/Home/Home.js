@@ -1,9 +1,10 @@
 import React from 'react';
+import ExtraSection from '../ExtraSection/ExtraSection';
 import './Home.css';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home'>
             <h2>This is home</h2>
             <div className='banner-sec'>
                 <div className='banner-img-sec'>
@@ -35,6 +36,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <ExtraSection></ExtraSection>
             <div className='footer'>
                 <footer>
                     <p>All right reserves</p>

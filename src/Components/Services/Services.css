@@ -1,0 +1,63 @@
+.services-sec{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+.card1{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+.card2{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+.card3{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+.card4{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+.card5{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+.card6{
+    background-color: #4B565F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    opacity: 0.9;
+}
+
