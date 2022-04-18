@@ -61,3 +61,14 @@
     opacity: 0.9;
 }
 
+.checkout-btn{
+    border: 3px solid #CBD4D6;
+    background-color: #4B565F;
+    color: white;
+}
+.card-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
