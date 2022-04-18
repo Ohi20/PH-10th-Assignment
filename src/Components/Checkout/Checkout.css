@@ -1,0 +1,36 @@
+.checkout-container{
+    padding: 35px;
+}
+
+.form-style{
+	width: 400px;
+    height: 200px;
+	margin: 20px auto;
+	padding: 60px 80px;
+	background: #CBD4D6;
+    border-radius: 5px;
+}
+.form-style h1{
+	background: #4B565F;
+	padding: 20px 0;
+	border-radius: 5px;
+	font-weight: 500;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.input-text {
+    padding: 20px;
+}
+.input-email{
+    padding: 20px;
+}
+.login-button{
+    padding: 10px;
+}

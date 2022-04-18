@@ -40,6 +40,19 @@ const Home = () => {
             <div className='footer'>
                 <footer>
                     <p>All right reserves</p>
+                    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="facebook.com"><i class="icon ion-social-instagram"></i></a><a href="facebook.com"><i class="icon ion-social-snapchat"></i></a><a href="facebook.com"><i class="icon ion-social-twitter"></i></a><a href="facebook.com"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="facebook.com">Home</a></li>
+                <li class="list-inline-item"><a href="facebook.com">Services</a></li>
+                <li class="list-inline-item"><a href="facebook.com">About</a></li>
+                <li class="list-inline-item"><a href="facebook.com">Terms</a></li>
+                <li class="list-inline-item"><a href="facebook.com">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
                 </footer>
             </div>
         </div>
