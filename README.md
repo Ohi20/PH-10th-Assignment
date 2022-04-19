@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# This is my project
+# Site Name : KimberlyLaw
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Site Link](https://tourmaline-dasik-503939.netlify.app/).
 
 ## Available Scripts
 
