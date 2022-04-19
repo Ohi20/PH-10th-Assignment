@@ -1,3 +1,7 @@
+.services-title{
+    color: #CBD4D6;
+}
+
 .services-sec{
     display: grid;
     grid-template-columns: repeat(3,1fr);

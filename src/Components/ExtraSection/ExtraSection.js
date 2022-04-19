@@ -4,7 +4,7 @@ import "./ExtraSection.css";
 const ExtraSection = () => {
     return (
         <div>
-            <h2> this is extra section</h2>
+            <h2 className='extra-title' >Extra section</h2>
             <div>
                 <div class="container">
                     <div class="coffee-header">

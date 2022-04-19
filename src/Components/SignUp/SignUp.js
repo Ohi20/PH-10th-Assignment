@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 
 
@@ -11,6 +12,8 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [guser, setGuser] = useState({});
+  const googleProvider = new GoogleAuthProvider();
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -34,7 +37,7 @@ const SignUp = () => {
     }
 
     if (user) {
-        navigate('/services');
+        navigate('/login');
     }
 
     const handleCreateUser = event => {
@@ -64,6 +67,19 @@ const SignUp = () => {
              event.preventDefault();
     }
 
+    const handleGoogleSignIn = () => {
+
+        signInWithPopup(auth, googleProvider)
+          .then(result => {
+            const guser = result.guser;
+            setGuser(guser);
+            console.log(guser);
+          })
+          .catch(error => {
+            console.error('error', error)
+          })
+      }
+
     return (
         <div className='form-container'>
             <div>
@@ -91,7 +107,10 @@ const SignUp = () => {
                 <p>
                     Already Have an account? <Link className='form-link' to="/login">Login</Link>
                 </p>
-                <button onClick={handleSignUpWithEmail}>Sign Up With Email</button>
+                <button className='login-btn' onClick={handleGoogleSignIn}>Sign Up With Email</button>
+                <button className='login-btn' onClick={handleGoogleSignIn}>Sign Up With Google</button>
+                <button className='login-btn' onClick={handleGoogleSignIn}>Sign Up With Facebook</button>
+                <button className='login-btn' onClick={handleGoogleSignIn}>Sign Up With Github</button>
             </div>
         </div>
     );

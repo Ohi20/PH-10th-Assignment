@@ -11,15 +11,17 @@ const Home = () => {
     }
     return (
         <div className='home'>
-            <h2>This is home</h2>
+            <h2 className='home-title'>Home</h2>
             <div className='banner-sec'>
                 <div className='banner-img-sec'>
-                    <img className='banner-img' src="" alt="" />
+                    <img className='banner-img' src="https://media.istockphoto.com/photos/smiling-lawyer-sitting-at-desk-in-office-picture-id104821116?k=20&m=104821116&s=612x612&w=0&h=y3lfuULb1SWjL0FKtNh2ser1NMYGuJQfQoz77QKOiYI=" alt="" />
                 </div>
                 <div className='banner-text-sec'>
-                    <h2>John Leader</h2>
+                    <div>
+                    <h1>John Leader</h1>
                     <h2>THE RIGHT LAWYER</h2>
                     <h3>MAKES ALL THE DIFFERENCE</h3>
+                    </div>
                 </div>
             </div>
             <div>
@@ -51,7 +53,7 @@ const Home = () => {
             <ExtraSection></ExtraSection>
             <div className='footer'>
                 <footer>
-                    <p>All right reserves</p>
+                    
                     <div class="footer-basic">
         <footer>
             <div class="social"><a href="facebook.com"><i class="icon ion-social-instagram"></i></a><a href="facebook.com"><i class="icon ion-social-snapchat"></i></a><a href="facebook.com"><i class="icon ion-social-twitter"></i></a><a href="facebook.com"><i class="icon ion-social-facebook"></i></a></div>
@@ -62,7 +64,7 @@ const Home = () => {
                 <li class="list-inline-item"><a href="facebook.com">Terms</a></li>
                 <li class="list-inline-item"><a href="facebook.com">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">Company Name © 2018</p>
+            <p class="copyright">AshrafOhi © 2022</p>
         </footer>
     </div>
                 </footer>

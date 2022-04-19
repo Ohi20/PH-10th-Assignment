@@ -1,3 +1,4 @@
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -29,6 +30,20 @@ const Login = () => {
 
     const handlePhoneNumberBlur = event => {
         setPhoneNumber(event.target.value);
+    }
+
+    const handleEmailSignIN = () => {
+        const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+  .then((result) => {
+    // Signed in 
+    const user = result.user;
+    console.log(user);
+    
+  })
+  .catch((error) => {
+    console.error(error);
+  });
     }
 
     if (user) {
@@ -67,7 +82,10 @@ const Login = () => {
                     New to Ema-John? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
 
-                <btn>Email Sign In</btn>
+                <button className='login-btn' onClick={handleEmailSignIN}>Email Sign In</button>
+                <button className='login-btn' onClick={handleEmailSignIN}>Google Sign In</button>
+                <button className='login-btn' onClick={handleEmailSignIN}>Github Sign In</button>
+                <button className='login-btn' onClick={handleEmailSignIN}>Facebook Sign In</button>
             </div>
         </div>
     );

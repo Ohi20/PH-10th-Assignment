@@ -1,4 +1,4 @@
-/// Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -8,6 +8,7 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyBOWJjgCtxVkMaMr029zGsqnHtAJeVjoJ4",
   authDomain: "independent-service-prvider.firebaseapp.com",
+  databaseURL: "https://independent-service-prvider-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "independent-service-prvider",
   storageBucket: "independent-service-prvider.appspot.com",
   messagingSenderId: "303815364827",

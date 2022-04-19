@@ -1,5 +1,12 @@
+.home{
+  
+  
+}
 .banner-sec{
     display:flex;
+}
+.home-title{
+  color: #CBD4D6;
 }
 .banner-img-sec{
     width: 50%;
@@ -14,6 +21,9 @@
     opacity: 0.8;
     margin-right: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .banner-img{
     height: 400px;
@@ -84,8 +94,8 @@
 
 .footer-basic {
     padding:40px 0;
-    background-color:#ffffff;
-    color:#4b4c4d;
+    background-color:#616E79;
+    color:white;
   }
   
   .footer-basic ul {
@@ -147,17 +157,10 @@
 
 }
 
-@media screen and (max-width:768px){
-    .home{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .banner-sec{
-        display:grid;
-        grid-template-columns: 1fr;
-    }    
-    .services-sec{
-        display:grid;
-        grid-template-columns: 1fr;
-    }    
+@media only screen and (max-width: 576px) {
+  .home{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+    
 }
