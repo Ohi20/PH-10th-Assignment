@@ -7,6 +7,7 @@ import './Login.css';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [
         signInWithEmailAndPassword,
         user,
@@ -24,6 +25,10 @@ const Login = () => {
 
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
+    }
+
+    const handlePhoneNumberBlur = event => {
+        setPhoneNumber(event.target.value);
     }
 
     if (user) {
@@ -47,6 +52,10 @@ const Login = () => {
                     <div className="input-group">
                         <label htmlFor="password">Password</label>
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="Phone-number">Phone Number</label>
+                        <input onBlur={handlePhoneNumberBlur} type="text" name="phone-number" id="" />
                     </div>
                     <p style={{ color: 'red' }}>{error?.message}</p>
                     {

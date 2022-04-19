@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { sendSignInLinkToEmail } from 'firebase/auth';
+
 
 
 
@@ -10,13 +10,15 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
 
     const handleEmailBlur = event => {
-        setEmail(event.target.value);
+        
+         setEmail(event.target.value);
     }
 
     const handlePasswordBlur = event => {
@@ -27,8 +29,12 @@ const SignUp = () => {
         setConfirmPassword(event.target.value);
     }
 
+    const handlePhoneNumberBlur = event => {
+        setPhoneNumber(event.target.value);
+    }
+
     if (user) {
-        navigate('/shop');
+        navigate('/services');
     }
 
     const handleCreateUser = event => {
@@ -45,17 +51,17 @@ const SignUp = () => {
         createUserWithEmailAndPassword(email, password);
     }
 
-    const handleSignUpWithEmail = () => {
-        sendSignInLinkToEmail(auth, email)
-            .then(() => {
-                window.localStorage.setItem('emailForSignIn', email);
-                // ...
+    const handleSignUpWithEmail = (event) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+               
+               const user = result.user;
+               console.log(user);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ...
+                console.error(error);
               });
+             event.preventDefault();
     }
 
     return (
@@ -74,6 +80,10 @@ const SignUp = () => {
                     <div className="input-group">
                         <label htmlFor="confirm-password">Confirm Password</label>
                         <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="Phone-number">Phone Number</label>
+                        <input onBlur={handlePhoneNumberBlur} type="text" name="phone-number" id="" />
                     </div>
                     <p style={{ color: 'red' }}>{error}</p>
                     <input className='form-submit' type="submit" value="Sign Up" required />
