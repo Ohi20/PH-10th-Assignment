@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Services.css';
 
-const Services = () => {
+
+ const Services = () => {
+    let navigate = useNavigate();
+    const handleServicebtn = () => {
+        let path = `/checkout`;
+        navigate(path);
+    }
     return (
         <div>
             <h2>This is services</h2>
@@ -13,7 +20,7 @@ const Services = () => {
                         <p>The term “personal injury” encompasses a broad range of injuries. Some are minor, but some injuries can be catastrophic and life-changing.</p>
                         <p>Price:$200 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                     <div className='card2'>
@@ -22,7 +29,7 @@ const Services = () => {
                         <p>Many things can contribute to a highway crash, including a possible defective roadway.</p>
                         <p>Price:$300 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                     <div className='card3'>
@@ -31,7 +38,7 @@ const Services = () => {
                         <p>Losing a loved one is always difficult. Losing someone to a tragedy can be especially traumatic. An experienced wrongful death lawyer will help guide you through this challenging time.</p>
                         <p>Price:$200 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                     <div className='card4'>
@@ -40,7 +47,7 @@ const Services = () => {
                         <p>A number of factors contribute to the risk of collisions, including vehicle design, speed of operation, road design, weather, road environment, driving skills, impairment due to alcohol or drugs, and behavior, notably aggressive driving, distracted driving, speeding and street racing.</p>
                         <p>Price:$400 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                     <div className='card5'>
@@ -49,7 +56,7 @@ const Services = () => {
                         <p>Bankruptcy is a legal proceeding involving a person or business that is unable to repay their outstanding debts. The bankruptcy process begins with a petition filed by the debtor, which is most common, or on behalf of creditors, which is less common.</p>
                         <p>Price:$300 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                     <div className='card6'>
@@ -58,7 +65,7 @@ const Services = () => {
                         <p>Consumer protection is the practice of safeguarding buyers of goods and services, and the public, against unfair practices in the marketplace. Consumer protection measures are often established by law</p>
                         <p>Price:$400 </p>
                         <div >
-                        <button className='checkout-btn' >Checkout</button>
+                        <button onClick={handleServicebtn} className='checkout-btn' >Checkout</button>
                         </div>
                     </div>
                 </div>

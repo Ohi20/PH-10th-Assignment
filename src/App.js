@@ -5,8 +5,11 @@ import Blogs from './Components/Blogs/Blogs';
 import Checkout from './Components/Checkout/Checkout';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
+import SignUp from './Components/SignUp/SignUp';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -26,9 +29,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="services" element={<Services></Services>} />
-        <Route path="checkout" element={<Checkout></Checkout>} />
+        <Route path="checkout" element={
+          <RequireAuth>
+            <Checkout></Checkout>
+          </RequireAuth>
+        } />
         <Route path="blogs" element={<Blogs></Blogs>} />
         <Route path="about" element={<AboutMe></AboutMe>} />
+        <Route path="login" element={<Login></Login>} />
+        <Route path="signup" element={<SignUp></SignUp>} />
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
     </div>

@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ExtraSection from '../ExtraSection/ExtraSection';
 import './Home.css';
 
 const Home = () => {
+    let navigate = useNavigate();
+    const handleLearnmorebtn = () => {
+        let path = `/services`;
+        navigate(path);
+    }
     return (
         <div className='home'>
             <h2>This is home</h2>
@@ -24,21 +30,21 @@ const Home = () => {
                         <img className='card-img' src="https://www.smudailycampus.com/wp-content/uploads/2020/01/63393.jpg" alt="" srcset="" />
                         <p>The term “personal injury” encompasses a broad range of injuries. Some are minor, but some injuries can be catastrophic and life-changing.</p>
                         <p>Price:$200 </p>
-                        <button className='learn-btn' >Learn more..</button>
+                        <button onClick={handleLearnmorebtn} className='learn-btn' >Learn more..</button>
                     </div>
                     <div className='card2'>
                         <h3>Defective Roadway</h3>
                         <img className='card-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP6px7frCg9sngtnOybVm15cNL-a4YOws3qdLsQOlKsvjkNFehKsGndBrPMvmoUKIDhGs&usqp=CAU" alt="" srcset="" />
                         <p>Many things can contribute to a highway crash, including a possible defective roadway.</p>
                         <p>Price:$300 </p>
-                        <button className='learn-btn' >Learn more..</button>
+                        <button onClick={handleLearnmorebtn} className='learn-btn' >Learn more..</button>
                     </div>
                     <div className='card3'>
                         <h3>Wrongful Death</h3>
                         <img className='card-img' src="https://cdn-bdkih.nitrocdn.com/pfSdWxsduJLFSvXIxUjfARwnMvWApKVV/assets/static/optimized/rev-da89f0b/wp-content/uploads/2018/10/death-1.jpg" alt="" srcset="" />
                         <p>Losing a loved one is always difficult. Losing someone to a tragedy can be especially traumatic. An experienced wrongful death lawyer will help guide you through this challenging time.</p>
                         <p>Price:$200 </p>
-                        <button className='learn-btn' >Learn more..</button>
+                        <button onClick={handleLearnmorebtn} className='learn-btn' >Learn more..</button>
                     </div>
                 </div>
             </div>
